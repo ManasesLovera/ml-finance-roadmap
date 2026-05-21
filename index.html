@@ -1,0 +1,366 @@
+export default function QuantRoadmap() {
+  const phases = [
+    {
+      title: "Phase 0 — Environment & Quant Workspace",
+      duration: "3–5 Days",
+      goal: "Set up a professional quant research environment.",
+      topics: [
+        "Python 3.12 + uv",
+        "Virtual environments and dependency management",
+        "Project structure",
+        "JupyterLab",
+        "NumPy",
+        "Pandas",
+        "Polars",
+        "Matplotlib",
+        "Ruff + Pyright"
+      ],
+      tools: ["uv", "Python 3.12", "JupyterLab", "Ruff", "Pyright", "Git"],
+      projects: [
+        "Create your quant-research repository",
+        "Fetch BTC/ETH historical data",
+        "Plot candlestick charts",
+        "Calculate simple returns",
+        "Visualize moving averages"
+      ]
+    },
+    {
+      title: "Phase 1 — Market & Statistics Foundations",
+      duration: "1–2 Weeks",
+      goal: "Build intuition for financial markets and statistical thinking.",
+      topics: [
+        "OHLCV data",
+        "Candlestick structure",
+        "Volatility",
+        "Liquidity",
+        "Momentum",
+        "Mean reversion",
+        "Correlation",
+        "Standard deviation",
+        "Z-score",
+        "Stationarity",
+        "Autocorrelation",
+        "Time series fundamentals"
+      ],
+      tools: ["NumPy", "Pandas", "Matplotlib"],
+      projects: [
+        "Build indicator playground",
+        "Implement RSI/MACD/Bollinger Bands",
+        "Create rolling volatility visualizer",
+        "Build correlation heatmap explorer"
+      ]
+    },
+    {
+      title: "Phase 2 — Backtesting & Quant Research",
+      duration: "2–4 Weeks",
+      goal: "Learn how to correctly test strategies.",
+      topics: [
+        "Backtesting fundamentals",
+        "Lookahead bias",
+        "Survivorship bias",
+        "Slippage",
+        "Commissions",
+        "Risk management",
+        "Position sizing",
+        "Sharpe ratio",
+        "Drawdown",
+        "Expectancy"
+      ],
+      tools: ["vectorbt", "Backtrader", "yfinance", "ccxt"],
+      projects: [
+        "Momentum strategy backtest",
+        "Mean reversion strategy",
+        "Volatility breakout system",
+        "Portfolio comparison dashboard",
+        "Equity curve visualizer"
+      ]
+    },
+    {
+      title: "Phase 3 — Feature Engineering",
+      duration: "2–3 Weeks",
+      goal: "Learn how to create useful predictive signals.",
+      topics: [
+        "Rolling features",
+        "Volatility features",
+        "Momentum features",
+        "Lag features",
+        "Volume anomalies",
+        "Regime features",
+        "Cross-asset relationships",
+        "Feature normalization",
+        "Feature selection"
+      ],
+      tools: ["Polars", "scikit-learn", "NumPy"],
+      projects: [
+        "Build reusable feature pipeline",
+        "Create feature store",
+        "Generate regime detection features",
+        "Build feature correlation explorer"
+      ]
+    },
+    {
+      title: "Phase 4 — Classical Machine Learning",
+      duration: "2–4 Weeks",
+      goal: "Train your first predictive financial models.",
+      topics: [
+        "Classification",
+        "Regression",
+        "Time-series train/test split",
+        "Walk-forward validation",
+        "Overfitting",
+        "Cross-validation",
+        "Confusion matrix",
+        "Precision & recall"
+      ],
+      tools: ["scikit-learn", "XGBoost", "LightGBM", "Optuna"],
+      projects: [
+        "Direction prediction model",
+        "Volatility prediction model",
+        "Asset ranking system",
+        "Feature importance analyzer",
+        "Hyperparameter optimization pipeline"
+      ]
+    },
+    {
+      title: "Phase 5 — Deep Learning for Finance",
+      duration: "3–6 Weeks",
+      goal: "Explore sequence modeling and advanced architectures.",
+      topics: [
+        "LSTM",
+        "GRU",
+        "Transformers",
+        "Temporal CNNs",
+        "Sequence modeling",
+        "Attention mechanisms",
+        "Temporal Fusion Transformers",
+        "GPU training"
+      ],
+      tools: ["PyTorch", "Lightning", "Weights & Biases"],
+      projects: [
+        "LSTM price direction model",
+        "Transformer volatility forecaster",
+        "Sequence-to-sequence prediction",
+        "Multi-asset deep learning system"
+      ]
+    },
+    {
+      title: "Phase 6 — Advanced Quant Systems",
+      duration: "Ongoing",
+      goal: "Build institutional-grade quant infrastructure.",
+      topics: [
+        "Statistical arbitrage",
+        "Pairs trading",
+        "Cointegration",
+        "Portfolio optimization",
+        "Risk parity",
+        "Market microstructure",
+        "Order book analysis",
+        "On-chain analytics",
+        "Alternative data"
+      ],
+      tools: ["MLflow", "Feast", "Ray", "Kafka", "DuckDB"],
+      projects: [
+        "Crypto quant platform",
+        "Sector rotation system",
+        "Statistical arbitrage engine",
+        "Real-time inference pipeline",
+        "Model registry & experiment tracker"
+      ]
+    }
+  ];
+
+  const books = [
+    "Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow",
+    "Advances in Financial Machine Learning",
+    "Python for Algorithmic Trading",
+    "Machine Learning for Asset Managers",
+    "Quantitative Trading"
+  ];
+
+  const principles = [
+    "Feature engineering matters more than fancy models.",
+    "Backtesting correctness is critical.",
+    "Most market data is noisy and non-stationary.",
+    "Avoid data leakage at all costs.",
+    "55% prediction accuracy can already be exceptional.",
+    "Markets are often better at predicting volatility than direction.",
+    "Research discipline beats hype."
+  ];
+
+  return (
+    <div className="min-h-screen bg-zinc-950 text-zinc-100 p-8">
+      <div className="max-w-7xl mx-auto space-y-10">
+        <header className="space-y-6 text-center">
+          <div className="inline-block rounded-full border border-zinc-700 px-4 py-1 text-sm text-zinc-400">
+            Quantitative Finance + ML/DL Engineering Roadmap
+          </div>
+
+          <h1 className="text-5xl font-bold tracking-tight">
+            From Python Basics to AI-Driven Quant Research
+          </h1>
+
+          <p className="text-zinc-400 max-w-3xl mx-auto text-lg leading-relaxed">
+            A structured roadmap for building quantitative trading systems,
+            financial ML pipelines, backtesting infrastructure, and deep
+            learning research environments from scratch.
+          </p>
+        </header>
+
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="rounded-3xl border border-zinc-800 bg-zinc-900/50 p-6">
+            <h2 className="text-xl font-semibold mb-3">Primary Goal</h2>
+            <p className="text-zinc-400 leading-relaxed">
+              Become capable of building and validating quantitative research
+              systems instead of blindly training prediction models.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-zinc-800 bg-zinc-900/50 p-6">
+            <h2 className="text-xl font-semibold mb-3">Best Starter Market</h2>
+            <p className="text-zinc-400 leading-relaxed">
+              Crypto markets provide free APIs, strong volatility, easier
+              experimentation, and more inefficiencies than large-cap equities.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-zinc-800 bg-zinc-900/50 p-6">
+            <h2 className="text-xl font-semibold mb-3">Core Philosophy</h2>
+            <p className="text-zinc-400 leading-relaxed">
+              Infrastructure quality, validation rigor, and feature engineering
+              are more important than model complexity.
+            </p>
+          </div>
+        </section>
+
+        <section className="space-y-8">
+          <div>
+            <h2 className="text-3xl font-bold mb-2">Roadmap Phases</h2>
+            <p className="text-zinc-400">
+              Learn progressively while continuously building projects.
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {phases.map((phase, index) => (
+              <div
+                key={index}
+                className="rounded-3xl border border-zinc-800 bg-zinc-900/40 p-8"
+              >
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-8">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">{phase.title}</h3>
+                    <p className="text-zinc-400 max-w-2xl">{phase.goal}</p>
+                  </div>
+
+                  <div className="rounded-2xl bg-zinc-800/60 px-4 py-2 text-sm text-zinc-300 h-fit">
+                    {phase.duration}
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                  <div className="rounded-2xl bg-zinc-950/50 p-5 border border-zinc-800">
+                    <h4 className="font-semibold mb-4 text-lg">Topics to Learn</h4>
+                    <ul className="space-y-2 text-zinc-400 text-sm">
+                      {phase.topics.map((topic, i) => (
+                        <li key={i}>• {topic}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="rounded-2xl bg-zinc-950/50 p-5 border border-zinc-800">
+                    <h4 className="font-semibold mb-4 text-lg">Tools & Libraries</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {phase.tools.map((tool, i) => (
+                        <span
+                          key={i}
+                          className="rounded-full bg-zinc-800 px-3 py-1 text-sm text-zinc-300"
+                        >
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="rounded-2xl bg-zinc-950/50 p-5 border border-zinc-800">
+                    <h4 className="font-semibold mb-4 text-lg">Projects to Build</h4>
+                    <ul className="space-y-2 text-zinc-400 text-sm">
+                      {phase.projects.map((project, i) => (
+                        <li key={i}>• {project}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="rounded-3xl border border-zinc-800 bg-zinc-900/40 p-8">
+            <h2 className="text-2xl font-bold mb-6">Recommended Books</h2>
+
+            <div className="space-y-4">
+              {books.map((book, index) => (
+                <div
+                  key={index}
+                  className="rounded-2xl border border-zinc-800 bg-zinc-950/50 p-4"
+                >
+                  <p className="text-zinc-300">{book}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-3xl border border-zinc-800 bg-zinc-900/40 p-8">
+            <h2 className="text-2xl font-bold mb-6">Important Principles</h2>
+
+            <div className="space-y-4">
+              {principles.map((principle, index) => (
+                <div
+                  key={index}
+                  className="rounded-2xl border border-zinc-800 bg-zinc-950/50 p-4"
+                >
+                  <p className="text-zinc-300">{principle}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="rounded-3xl border border-zinc-800 bg-gradient-to-br from-zinc-900 to-zinc-950 p-8">
+          <h2 className="text-3xl font-bold mb-6">Suggested Final Architecture</h2>
+
+          <div className="rounded-2xl bg-black/40 border border-zinc-800 p-6 overflow-auto">
+            <pre className="text-sm text-zinc-300">
+{`quant-platform/
+├── data/
+│   ├── raw/
+│   ├── processed/
+│   └── features/
+├── notebooks/
+├── src/
+│   ├── ingestion/
+│   ├── indicators/
+│   ├── features/
+│   ├── models/
+│   ├── backtesting/
+│   ├── evaluation/
+│   └── utils/
+├── experiments/
+├── models/
+├── pipelines/
+├── dashboards/
+├── tests/
+└── pyproject.toml`}
+            </pre>
+          </div>
+        </section>
+
+        <footer className="text-center text-zinc-500 text-sm py-8">
+          Build slowly. Validate everything. Treat financial ML as an
+          engineering discipline, not a prediction game.
+        </footer>
+      </div>
+    </div>
+  );
+}
